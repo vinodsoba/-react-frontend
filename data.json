@@ -1,0 +1,21 @@
+{
+  "layout": "tabs",
+  "defaultValues": {},
+  "paymentMethods": {
+      "ideal": {
+          "bank": "abn_amro"
+      }
+  },
+  "fields": {
+      "billingDetails": {
+          "name": "auto",
+          "email": "auto",
+          "phone": "auto",
+          "address": "auto"
+      }
+  },
+  "wallets": {
+      "applePay": "auto",
+      "googlePay": "never"
+  }
+}

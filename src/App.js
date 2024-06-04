@@ -1,23 +1,41 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route }  from 'react-router-dom'
+
+// import global style
 import './App.css';
+
+// pages
+import Homepage from './pages/homepage/Homepage';
+//import Project from './pages/project/Project';
+//import Login from './pages/login/Login';
+//import Signup from './pages/signup/Signup';
+import Header from './component/header/Header';
+import SideBar from './component/sidebar/SideBar';
+//import FetchData from './component/fetchdata/FetchData';
+//import Stripe from './pages/stripe/Stripe';
+import Complete from './component/complete/Complete';
+import Payment from './component/payment/Payment';
+import MuleApi from './component/muleapi/MuleApi';
+
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <SideBar />
+        <div className='app-container'>
+          <Header />
+            <Routes>
+                <Route exact path="/" element={<Homepage />} />   
+                <Route path="/complete" element={<Complete />} />
+                <Route path="/payment" element={<Payment />} />    
+                <Route path="/api" element={<MuleApi />} />      
+            </Routes>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }

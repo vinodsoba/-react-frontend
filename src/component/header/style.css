@@ -1,0 +1,14 @@
+.header {
+    background-color: #ddd;
+    min-height: 50px;
+   
+}
+.row {
+    margin:0;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0 10px 20px
+}

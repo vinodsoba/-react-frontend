@@ -1,0 +1,13 @@
+.nav ul{
+    display: flex;
+    padding:20px;
+
+}
+
+.nav ul a {
+    list-style: none;
+    margin-right: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
